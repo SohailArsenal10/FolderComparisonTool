@@ -95,8 +95,8 @@ public class readFile {
 		int option = sc.nextInt();
         switch(option){
         case 1: 
-        File folder1_c1_file = new File("<filepath>");
-        File folder2_c1_file = new File("<filepath>""); 
+        File folder1_c1_file = new File("<filepath1>");
+        File folder2_c1_file = new File("<filepath2>"); 
         try
         {
         Object[] obj = returnArraysBasedOnOption(folder1_c1_file,folder2_c1_file);
