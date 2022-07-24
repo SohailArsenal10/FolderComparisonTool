@@ -1,0 +1,35 @@
+public static void main(String[] args)
+	{
+		readFile rf = new readFile();
+        int option = 1;
+        switch(option){
+        case 1:
+		File f1 = new File("C:\\Spring Workspace\\folderComparisonTool\\src\\readFile\\test.txt");
+        File f2 = new File("C:\\Spring Workspace\\folderComparisonTool\\src\\readFile\\test2.txt");
+		try
+		{
+			int lines1 = rf.countLines(f1);
+			System.out.println("The number of lines in file1 are " + lines1);
+			String[] arr1 = rf.readLinesIntoArray(f1,lines1);
+                                             System.out.println("Below is the File1 content");
+                                             System.out.println();
+                                             Arrays.stream(arr1).forEach(System.out::println);
+                                             
+            int lines2 = rf.countLines(f2);
+			System.out.println("The number of lines in file2 are " + lines2);
+                                             String[] arr2 = rf.readLinesIntoArray(f2,lines2);
+                                             System.out.println("Below is the File2 content");
+                                             System.out.println();
+                                             Arrays.stream(arr2).forEach(System.out::println);
+			
+
+		}
+		catch(IOException ioe)
+		{
+		   //System.out.println(ioe);
+		   ioe.printStackTrace();
+		}
+        break;
+                             
+	}
+	}
