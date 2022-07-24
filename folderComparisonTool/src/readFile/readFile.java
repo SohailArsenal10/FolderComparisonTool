@@ -95,8 +95,8 @@ public class readFile {
 		int option = sc.nextInt();
         switch(option){
         case 1: 
-        File folder1_c1_file = new File("C:\\Spring Workspace\\folderComparisonTool\\src\\readFile\\test.txt");
-        File folder2_c1_file = new File("C:\\Spring Workspace\\folderComparisonTool\\src\\readFile\\test2.txt"); 
+        File folder1_c1_file = new File("<filepath>");
+        File folder2_c1_file = new File("<filepath>""); 
         try
         {
         Object[] obj = returnArraysBasedOnOption(folder1_c1_file,folder2_c1_file);
