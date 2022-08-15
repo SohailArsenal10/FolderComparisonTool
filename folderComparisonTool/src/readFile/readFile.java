@@ -150,8 +150,8 @@ public class readFile {
         break;
         
         case 2: 
-        File folder2_c2_file = new File("C:\\Spring Workspace\\folderComparisonTool\\src\\readFile\\test2.txt");
-        File folder1_c2_file = new File("C:\\Spring Workspace\\folderComparisonTool\\src\\readFile\\test.txt"); 
+        File folder2_c2_file = new File("<filepath>");
+        File folder1_c2_file = new File("<filepath>"); 
         try
         {
         Object[] obj = returnArraysBasedOnOption(folder2_c2_file,folder1_c2_file);
