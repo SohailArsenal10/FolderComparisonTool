@@ -1,0 +1,117 @@
+package readFile;
+
+import helperFunctions.Helper;
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.lang.Object;
+
+public class ReadFile {
+
+	public ReadFile()
+	{
+		
+	}
+	
+	Helper hr = new Helper();
+	public void readLines(File f) throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader(f));
+		String line;
+		while((line = br.readLine()) != null)
+		{
+			System.out.println(line);
+		}
+		br.close();
+	}
+	
+	
+	 public int countLines(File f) throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader(f));
+		String line;
+		int lineCount = 0;
+		while((line = br.readLine()) != null)
+		{
+			lineCount++;
+		}
+		br.close();
+		return lineCount;
+	}
+	 
+	 
+	  public String[] readLinesIntoArray(File f, int lines1) throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader(f));
+		String line;
+		int i = 0;
+		String[] arr1 = new String[lines1];
+		while((line = br.readLine()) != null)
+		{
+			arr1[i] = line;
+			i++;
+		}
+		br.close();
+		//System.out.println(arr1);
+		//Arrays.stream(arr1).forEach(System.out::println);
+        return arr1;
+	}
+	  
+	  public Object[] returnArraysBasedOnOption(File f1, File f2) throws IOException
+		{
+		//ReadFile rf = new ReadFile();
+		try
+		{
+			int lines1 = hr.countLines(f1);			
+			String[] arr1 = hr.readLinesIntoArray(f1,lines1);
+                                             
+            int lines2 = hr.countLines(f2);
+            String[] arr2 = hr.readLinesIntoArray(f2,lines2);
+            
+    		return new Object[]{arr1, arr2, lines1, lines2};
+            
+             /*Object[] arrayObjects = new Object[2];
+             arrayObjects [0] = arr1;
+             arrayObjects [1] = arr2;
+             return arrayObjects;*/
+                        
+		}
+		catch(IOException ioe)
+		{
+		   //System.out.println(ioe);
+		   ioe.printStackTrace();
+		}
+		return null;
+
+		}
+	  
+	  public String[] returnOutputArrayBasedOnOption(String[] arr1, String[] arr2,int i,int j) throws IOException
+	{
+		String outarr[] = new String[i];
+      //To clear any null values in output
+      Arrays.fill(outarr, "");
+      int k = 0;
+      
+      for(i = 0; i < arr1.length; i++)
+      {
+      	boolean ignorevalue = false;
+      	for(j = 0; j < arr2.length; j++)
+      	{
+      		if(arr1[i].equals(arr2[j]))
+      		{
+      			ignorevalue = true;
+      			break;
+      		}        		
+      	}
+      	if(!ignorevalue)
+      	{
+      	outarr[k] = arr1[i];
+			k++;
+      	}
+      }
+      return outarr;
+	}
+	  
+}
