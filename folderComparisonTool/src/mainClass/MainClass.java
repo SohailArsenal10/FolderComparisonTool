@@ -1,100 +1,60 @@
 package mainClass;
 
-import readFile.ReadFile;
-import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
+
 import java.util.Scanner;
-import java.util.stream.IntStream;
+import caseMethods.CaseMethods;
+//import java.util.stream.IntStream;
 
 public class MainClass {
 
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		ReadFile rf = new ReadFile();
+		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
+		CaseMethods cm = new CaseMethods();
 		System.out.println("Enter an option for folder order");
 		int option = sc.nextInt();
         switch(option){
         case 1: 
-        File folder1_c1_file = new File("<filepath1>");
-        File folder2_c1_file = new File("<filepath2>"); 
-        
-        try
-        {
-        Object[] obj = rf.returnArraysBasedOnOption(folder1_c1_file,folder2_c1_file);
-        String[] folder1_c1_arr = (String[])obj[0];
-        String[] folder2_c1_arr = (String[])obj[1];
-        //i and j are the number of lines in folder1 and folder2 respectively
-        int i = (int)obj[2];      
-        int j = (int)obj[3];
-        
-        String[] outarr1 = rf.returnOutputArrayBasedOnOption(folder1_c1_arr,folder2_c1_arr,i,j);
-        
-        System.out.println("Below is the File1 content");
-        System.out.println();
-        Arrays.stream(folder1_c1_arr).forEach(System.out::println);
-        
-        System.out.println("Below is the File2 content");
-        System.out.println();
-        Arrays.stream(folder2_c1_arr).forEach(System.out::println);
-        
-        
-        System.out.println("Files which are present in folder1 but not in folder2 are");
-        System.out.println();
-        Arrays.stream(outarr1).forEach(System.out::println);
-        /*System.out.println();
-        System.out.println(outarr1.length);*/
-         
-        }
-        catch(IOException ioe)
-		{
-		   //System.out.println(ioe);
-		   ioe.printStackTrace();
-		}
+        	String[] outarr1 = cm.f1f2();
+        	System.out.println("To continue checking in terms of folder2, press Y else any other key");
+        	String option1 = sc1.next();
+        	switch(option1) 
+        	{
+        	case "y":
+        	case "Y":
+        		String[] outarr2 = cm.f2f1();
+        		sc1.close();
+        		break;
+        	default:
+        		break;
+        		
+        	}
+        break;	        
+        case 2:
+        	String[] outarr3 = cm.f2f1();
+        	System.out.println("To continue checking in terms of folder1, press Y else any other key");
+        	String option2 = sc2.next();
+        	switch(option2) 
+        	{
+        	case "y":
+        	case "Y":
+        		String[] outarr4= cm.f2f1();
+        		sc2.close();
+        		break;
+        	default:
+        		break;
+        		
+        	}        
         break;
-        
-        case 2: 
-        File folder2_c2_file = new File("<filepath2>");
-        File folder1_c2_file = new File("<filepath1>"); 
-
-        try
-        {
-        Object[] obj = rf.returnArraysBasedOnOption(folder2_c2_file,folder1_c2_file);
-        String[] folder2_c2_arr = (String[])obj[0];
-        String[] folder1_c2_arr = (String[])obj[1];
-        //i and j are the number of lines in folder1 and folder2 respectively
-        int i = (int)obj[2];      
-        int j = (int)obj[3];
-        
-        String[] outarr2 = rf.returnOutputArrayBasedOnOption(folder2_c2_arr,folder1_c2_arr,i,j);
-        System.out.println("Below is the File2 content");
-        System.out.println();
-        Arrays.stream(folder2_c2_arr).forEach(System.out::println);
-        
-        System.out.println("Below is the File1 content");
-        System.out.println();
-        Arrays.stream(folder1_c2_arr).forEach(System.out::println);
-        
-        System.out.println("Files which are present in folder2 but not in folder1 are");
-        System.out.println();
-        Arrays.stream(outarr2).forEach(System.out::println);
-        /*System.out.println();
-        System.out.println(outarr1.length);*/
-        }
-        catch(IOException ioe)
-		{
-		   //System.out.println(ioe);
-		   ioe.printStackTrace();
-		}
-        break;
-        case 3: 
+        /*case 3: 
         	int a[][] = new int[5][5];        	
         	IntStream stream = Arrays.stream(a).flatMapToInt(Arrays::stream);
         	System.out.println();
         	System.out.println(stream);
         	Arrays.stream(a).flatMapToInt(Arrays::stream).forEach(System.out::println);
-        	break;        	        	
+        	break;  */      	        	
 	}
         sc.close();
 

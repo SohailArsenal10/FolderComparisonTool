@@ -1,0 +1,54 @@
+package mainClass;
+
+
+import java.util.Scanner;
+import caseMethods.CaseMethods;
+//import java.util.stream.IntStream;
+
+public class MainClass {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		Scanner sc1 = new Scanner(System.in);
+		CaseMethods cm = new CaseMethods();
+		System.out.println("Enter an option for folder order");
+		int option = sc.nextInt();
+        switch(option){
+        case 1: 
+        	String[] outarr1 = cm.f1f2();
+        	System.out.println("To continue checking in terms of folder2, press Y else any other key");
+        	String option1 = sc1.next();
+        	switch(option1) 
+        	{
+        	case "y":
+        	case "Y":
+        		String[] outarr2 = cm.f2f1();
+        		sc1.close();
+        		break;
+        	default:
+        		break;
+        		
+        	}
+        	
+        	
+        
+
+        
+        case 2:
+        	String[] outarr2 = cm.f2f1();
+        
+        break;
+        /*case 3: 
+        	int a[][] = new int[5][5];        	
+        	IntStream stream = Arrays.stream(a).flatMapToInt(Arrays::stream);
+        	System.out.println();
+        	System.out.println(stream);
+        	Arrays.stream(a).flatMapToInt(Arrays::stream).forEach(System.out::println);
+        	break;  */      	        	
+	}
+        sc.close();
+
+	}
+
+}
