@@ -40,7 +40,7 @@ public class MainClass {
         	{
         	case "y":
         	case "Y":
-        		String[] outarr4= cm.f2f1();
+        		String[] outarr4= cm.f1f2();
         		sc2.close();
         		break;
         	default:

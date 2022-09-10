@@ -11,6 +11,7 @@ public class MainClass {
 	{
 		Scanner sc = new Scanner(System.in);
 		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
 		CaseMethods cm = new CaseMethods();
 		System.out.println("Enter an option for folder order");
 		int option = sc.nextInt();
@@ -30,14 +31,22 @@ public class MainClass {
         		break;
         		
         	}
-        	
-        	
-        
-
-        
+        break;	        
         case 2:
-        	String[] outarr2 = cm.f2f1();
-        
+        	String[] outarr3 = cm.f2f1();
+        	System.out.println("To continue checking in terms of folder1, press Y else any other key");
+        	String option2 = sc2.next();
+        	switch(option2) 
+        	{
+        	case "y":
+        	case "Y":
+        		String[] outarr4= cm.f2f1();
+        		sc2.close();
+        		break;
+        	default:
+        		break;
+        		
+        	}        
         break;
         /*case 3: 
         	int a[][] = new int[5][5];        	
