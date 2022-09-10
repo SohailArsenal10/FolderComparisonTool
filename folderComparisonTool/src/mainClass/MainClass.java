@@ -18,6 +18,7 @@ public class MainClass {
         switch(option){
         case 1: 
         	String[] outarr1 = cm.f1f2();
+            System.out.println();
         	System.out.println("To continue checking in terms of folder2, press Y else any other key");
         	String option1 = sc1.next();
         	switch(option1) 
@@ -34,6 +35,7 @@ public class MainClass {
         break;	        
         case 2:
         	String[] outarr3 = cm.f2f1();
+        	System.out.println();
         	System.out.println("To continue checking in terms of folder1, press Y else any other key");
         	String option2 = sc2.next();
         	switch(option2) 

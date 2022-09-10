@@ -43,11 +43,11 @@ public class ReadFile {
 
 		}
 	  
-	  public String[] returnOutputArrayBasedOnOption(String[] arr1, String[] arr2,int i,int j) throws IOException
+	  public Object[] returnOutputArrayBasedOnOption(String[] arr1, String[] arr2,int i,int j) throws IOException
 	{
 		String outarr[] = new String[i];
       //To clear any null values in output
-      Arrays.fill(outarr, "");
+      //Arrays.fill(outarr, "");
       int k = 0;
       
       for(i = 0; i < arr1.length; i++)
@@ -67,7 +67,7 @@ public class ReadFile {
 			k++;
       	}
       }
-      return outarr;
+      return new Object[]{outarr,k};
 	}
 	  
 }
