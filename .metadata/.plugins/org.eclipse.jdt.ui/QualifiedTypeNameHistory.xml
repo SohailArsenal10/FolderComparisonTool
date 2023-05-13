@@ -3,9 +3,11 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
     <fullyQualifiedTypeName name="readFile.ReadFile"/>
     <fullyQualifiedTypeName name="helperFunctions.Helper"/>
     <fullyQualifiedTypeName name="caseMethods.CaseMethods"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="helperFunctions.FolderInput"/>
 </qualifiedTypeNameHistroy>
