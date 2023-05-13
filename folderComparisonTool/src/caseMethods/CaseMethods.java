@@ -17,7 +17,7 @@ public class CaseMethods {
 	
 	ReadFile rf = new ReadFile();
 	
-	public String[] f1f2()
+	public void f1f2()
 	{
 		FolderInput fi = new FolderInput();
 		Object[] oobj = fi.folderinput();
@@ -65,17 +65,17 @@ public class CaseMethods {
         Arrays.stream(outarr1).filter(Objects::nonNull).forEach(System.out::println);
         }
         
-        return outarr1; 
+        //return outarr1; 
         }
         catch(IOException ioe)
 		{
 		   //System.out.println(ioe);
 		   ioe.printStackTrace();
 		}
-		return null;
+		//return null;
 	}
 	
-	public String[] f2f1()
+	public void f2f1()
 	{
 		File folder2_c2_file = new File("<filepath2>");
         File folder1_c2_file = new File("<filepath1>"); 
@@ -117,14 +117,14 @@ public class CaseMethods {
         Arrays.stream(outarr2).filter(Objects::nonNull).forEach(System.out::println);
         }
         
-        return outarr2;
+        //return outarr2;
         }
         catch(IOException ioe)
 		{
 		   //System.out.println(ioe);
 		   ioe.printStackTrace();
 		}
-        return null;
+        //return null;
 	}
 }
 

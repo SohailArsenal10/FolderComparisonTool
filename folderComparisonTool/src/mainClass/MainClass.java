@@ -26,7 +26,8 @@ public class MainClass {
 		
         switch(option){
         case 1: 
-        	String[] outarr1 = cm.f1f2();
+        	//String[] outarr1 = cm.f1f2();
+			cm.f1f2();
             System.out.println();
         	System.out.println("To continue checking in terms of folder2, press Y else any other key");
         	//System.out.println("After 2nd scanner call "+System.in.available());
@@ -36,7 +37,8 @@ public class MainClass {
         	{
         	case "y":
         	case "Y":
-        		String[] outarr2 = cm.f2f1();
+        		//String[] outarr2 = cm.f2f1();
+				cm.f2f1();
         		sc1.close();
         		break;
         	default:
@@ -45,7 +47,8 @@ public class MainClass {
         	}
         break;	        
         case 2:
-        	String[] outarr3 = cm.f2f1();
+        	//String[] outarr3 = cm.f2f1();
+			cm.f2f1();
         	System.out.println();
         	System.out.println("To continue checking in terms of folder1, press Y else any other key");
         	String option2 = sc2.next();
@@ -53,7 +56,8 @@ public class MainClass {
         	{
         	case "y":
         	case "Y":
-        		String[] outarr4= cm.f1f2();
+        		//String[] outarr4= cm.f1f2();
+				cm.f1f2();
         		sc2.close();
         		break;
         	default:
