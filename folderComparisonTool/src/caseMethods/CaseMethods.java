@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
+import helperFunctions.FolderInput;
 
 import readFile.ReadFile;
 
@@ -18,8 +19,15 @@ public class CaseMethods {
 	
 	public String[] f1f2()
 	{
-		File folder1_c1_file = new File("<filepath1>");
-        File folder2_c1_file = new File("<filepath2>"); 
+		FolderInput fi = new FolderInput();
+		Object[] oobj = fi.folderinput();
+		String outputfolder1 = (String)oobj[0];
+		String outputfolder2 = (String)oobj[1];
+		System.out.println("outputfolders are: "+ outputfolder1 + "\n"+ outputfolder2);
+		        
+        File folder1_c1_file = new File(outputfolder1);
+        File folder2_c1_file = new File(outputfolder2);
+        System.out.println("input files are: "+ folder1_c1_file + "\n"+ folder2_c1_file);
         
         try
         {
@@ -119,3 +127,5 @@ public class CaseMethods {
         return null;
 	}
 }
+
+
