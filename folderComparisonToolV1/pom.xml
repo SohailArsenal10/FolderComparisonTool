@@ -48,11 +48,11 @@
             <version>10.1.30</version>
         </dependency>
         
-                <!-- Spring Boot Starter Data JPA: To work with JPA for data access -->
+                <!-- Spring Boot Starter Data JPA: To work with JPA for data access 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+        </dependency>-->
         
         <!-- Spring Boot Starter Validation: For Jakarta EE bean validation -->
         <dependency>
@@ -60,19 +60,19 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         
-        <!-- H2 Database: In-memory database for development and testing -->
+        <!-- H2 Database: In-memory database for development and testing 
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
         
-        <!-- Lombok: To reduce boilerplate code in Java classes -->
+        <!-- Lombok: To reduce boilerplate code in Java classes 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-        </dependency>
+        </dependency>-->
         
         <dependency>
             <groupId>org.springframework.boot</groupId>

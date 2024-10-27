@@ -1,4 +1,4 @@
-package com.javafolderapp.folderComparisonToolV1.service;
+/*package com.javafolderapp.folderComparisonToolV1.service;
 
 
 import java.util.List;
@@ -27,5 +27,5 @@ public class FileServiceImplementation implements FileService {
 		for (FileModel fileModal : fileList)
 			fileRepository.save(fileModal);
 	}
-}
+}*/
 

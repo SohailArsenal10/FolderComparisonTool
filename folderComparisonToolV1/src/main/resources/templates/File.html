@@ -3,58 +3,63 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>File Upload</title>
-</head>
-
 <style>
-input[type=file], select {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	background-color: #1affff;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
 }
 
-.button {
-	background-color: #4CAF50; /* Green */
-	border: none;
-	color: white;
-	padding: 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin-left: 45%; 
-	cursor: pointer;
+h1 {
+    color: #308d46;
 }
 
-.button4 {
-	border-radius: 10px;
+.uploadButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-div {
-	border-radius: 5px;
-	background-color: #a6a6a6;
-	padding: 10px;
-	width: 50%;
-	margin: auto;
+.row {
+    margin: 10px 0;
 }
 </style>
+</head>
 <body>
-	<form method="POST" enctype="multipart/form-data">
-		<div>
-		   <div>
-			<input type="file" name="files"
-			webkitdirectory multiple>
-		   </div>
-		   <div>
-		   	<input type="file" name="files2"
-		   	 multiple>
-		   </div>
-			<button class="button button4" type="submit">
-			Upload</button> </div>
+    <h1>Folder Comparison Tool</h1>
+    <form method="post"
+        enctype="multipart/form-data">
+        
+		<h3>Upload using Multiple File Selection</h3>
+		<div class="row">
+            <input type="file" name="files1" multiple required>
+        </div>
+
+        <h3>Upload using Folder Selection</h3>
+        <div class="row">
+            <input type="file" name="files2" webkitdirectory multiple required>
+        </div>
+		
+		<div class="row">
+			<label for="cars">Select folder comparison order:</label>
+
+			<select name="folder" id="folder">
+			  <option value="folder1">Folder1 compared with Folder2</option>
+			  <option value="folder2">Folder2 compared with Folder1</option>
+			</select>
+		</div>        
+
+		<div class="row">
+		   <button class="uploadButton" type="submit">Upload File</button>
+		</div>
 	</form>
+
 </body>
 </html>
