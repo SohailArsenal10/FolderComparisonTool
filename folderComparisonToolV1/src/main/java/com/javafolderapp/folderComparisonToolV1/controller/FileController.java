@@ -1,9 +1,7 @@
 package com.javafolderapp.folderComparisonToolV1.controller;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,15 +24,26 @@ public class FileController {
 	// @GetMapping annotation for 
 	// mapping HTTP GET requests onto
 	// specific handler methods. */
-	@GetMapping("/") 
-	public String getData() {
-		return "File";
+	
+	  @GetMapping("/")
+	  public String homepage() {
+	    return "redirect:/UploadFiles";
+	  }
+	
+	@GetMapping("/UploadFiles") 
+	public String UploadFiles() {
+		return "UploadFiles";
+	}
+	
+	@GetMapping("/UploadFolders") 
+	public String UploadFolders() {
+		return "UploadFolders";
 	}
 
 	// @PostMapping annotation maps HTTP POST 
 	// requests onto specific handler methods
-	@PostMapping("/") 
-	public String uploadMultipartFile(@RequestParam("files1") MultipartFile[] files1, @RequestParam("files2") MultipartFile[] files2,@RequestParam("folder") String folder) {  //Model model
+	@PostMapping("/files/upload") 
+	public String uploadMultipartFile(@RequestParam("files1") MultipartFile[] files1, @RequestParam("files2") MultipartFile[] files2, Model model) {  //Model model
 	try {
 		// Declare empty list for collect the files data 
 		// which will come from UI
@@ -67,22 +76,39 @@ public class FileController {
 			fileList2.add(fileName);
 			System.out.println("Files2 is " + fileName);
 			}
-		System.out.println("folder value is " + folder);
+		//System.out.println("folder value is " + folder);
 
-		switch(folder){
-        case "folder1":
+		/*switch(folder){
+        case "folder1extra":
         {
         	fs.f1f2(fileList1.toArray(),fileList2.toArray());
             System.out.println();
         }break;
-        case "folder2":
+        case "folder1missing":
         {
         	fs.f2f1(fileList2.toArray(),fileList1.toArray());
             System.out.println();
         }break;
         	default:
         		break;        		
-        }	        
+        }*/	
+		
+		Object[] obj1 = fs.f1f2(fileList1.toArray(),fileList2.toArray());
+		String[] outarr1 = (String[])obj1[0];
+        int outarr1_length = (int)obj1[1];
+        System.out.println();
+        
+        Object[] obj2 = fs.f2f1(fileList2.toArray(),fileList1.toArray());
+        String[] outarr2 = (String[])obj2[0];
+        int outarr2_length = (int)obj2[1];
+        System.out.println();
+        
+        model.addAttribute("filesarr1", outarr1);
+        model.addAttribute("filesarr2", outarr2);
+        model.addAttribute("filesarr1length", outarr1_length);
+        model.addAttribute("filesarr2length", outarr2_length);
+        System.out.println("outarr1_length= " + outarr1_length);
+        System.out.println("outarr2_length= " + outarr2_length);
 		
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -93,7 +119,6 @@ public class FileController {
 		// fetch all file list from DB
 		//model.addAttribute("allFiles", fileServiceImplementation.getAllFiles());
 	
-		//return "FileList";
-		return "File";
+		return "FileList";
 	}
 }

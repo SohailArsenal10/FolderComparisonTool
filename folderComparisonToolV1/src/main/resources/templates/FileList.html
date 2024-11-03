@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+  <title>Files/Folders Comparison Tool</title>
+
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+  <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+  <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div th:replace="~{fragments/header :: header}"></div>
+
+  <div class="container-fluid" style="max-width: 600px; margin: 0 auto;">
+    <h2 class="text-center">Files/Folders Comparison Result</h2>
+
+    <div th:if="${filesarr1length > 0 || filesarr2length > 0}">
+      <table class="table table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Extra files in Folder1</th>
+            <th scope="col">Missing files in Folder1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="file1 : ${filesarr1}">
+            <td>[[${file1}]]</td>           
+          </tr>
+		  <tr th:each="file2 : ${filesarr2}">
+		    <td>[[${file2}]]</td>           
+		  </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div th:if="${filesarr1length == 0 && filesarr2length == 0}">
+      <span>Files/Folders selection is identical!</span>
+    </div>
+  </div>
+  
+  <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+
+</html>
