@@ -30,6 +30,11 @@ public class FileController {
 	    return "redirect:/UploadFiles";
 	  }
 	
+	@GetMapping("/error")
+	  public String errorpage() {
+	    return "error";
+	  }
+	
 	@GetMapping("/UploadFiles") 
 	public String UploadFiles() {
 		return "UploadFiles";
@@ -39,10 +44,15 @@ public class FileController {
 	public String UploadFolders() {
 		return "UploadFolders";
 	}
+	
+	@GetMapping("/contact") 
+	public String contactpage() {
+		return "contact";
+	}
 
 	// @PostMapping annotation maps HTTP POST 
 	// requests onto specific handler methods
-	@PostMapping("/files/upload") 
+	@PostMapping("/files/result") 
 	public String uploadMultipartFile(@RequestParam("files1") MultipartFile[] files1, @RequestParam("files2") MultipartFile[] files2, Model model) {  //Model model
 	try {
 		// Declare empty list for collect the files data 
