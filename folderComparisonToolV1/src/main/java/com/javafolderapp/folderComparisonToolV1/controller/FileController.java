@@ -49,6 +49,11 @@ public class FileController {
 	public String contactpage() {
 		return "contact";
 	}
+	
+	@GetMapping("/contact1") 
+	public String contactpage1() {
+		return "contact1";
+	}
 
 	// @PostMapping annotation maps HTTP POST 
 	// requests onto specific handler methods
