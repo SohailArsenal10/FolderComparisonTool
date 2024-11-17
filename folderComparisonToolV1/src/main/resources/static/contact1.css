@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #000;
+    height: 100vh;
+    background-image: url(https://ibb.co/vHTWnbX);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+}
+.star-widget input {
+    display: none;
+}
+.star-widget label {
+    font-size: 35px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all .2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+    color: #fd4;
+}
+
+input:checked ~ label {
+    color: #fd4;
+    
+}
+
+#rate-1:checked ~ .rating-desc:before {
+    content: "Poor😢";
+}
+#rate-2:checked ~ .rating-desc:before {
+    content: "Not bad😐";
+}
+#rate-3:checked ~ .rating-desc:before {
+    content: "Average🙂";
+}
+#rate-4:checked ~ .rating-desc:before {
+    content: "Good😃";
+}
+#rate-5:checked ~ .rating-desc:before {
+    content: "Excellent👌";
+}
+
+ .rating-desc {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all .2s ease;
+}
+.textarea textarea {
+    border: 1px solid #e4e5e7;
+    background: white;
+    color: #6C6C6E;
+    padding: 22px;
+    font-size: 16px;
+    margin-top: 15px;
+    letter-spacing: -0.011em;
+    border-radius: 10px;
+    resize: none;
+}
+.textarea textarea:focus {
+    border-color: #36bb91 !important;
+    background: white;
+    color: #1a1a1a;
+    outline: none;
+}
+ .btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+.btn:active {
+    border: none;
+}
+:not(.btn-check)+.btn:active {
+    outline: none;
+}
+ .btn button {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    background: #36bb91;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+ .btn button:hover {
+    background: #1a5e49;
+}
+.star-rating-bx {
+    background-color: #fff;
+    box-shadow: 0px 4px 40px 0px rgb(0 0 0 / 5%);
+    border-radius: 10px;
+    padding: 40px;
+}
+@media (max-width:576px) {
+    .star-rating-bx {
+        padding:20px 15px;
+    }
+}
+
+.star-icon {
+    padding-bottom: 20px;
+}
+.modal-title {
+    font-weight: 600;
+}
+#error-comment,
+#error-rating {
+    color: red;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

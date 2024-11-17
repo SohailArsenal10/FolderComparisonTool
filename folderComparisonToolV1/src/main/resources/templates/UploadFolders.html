@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+  <title>Files/Folders Comparison Tool</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+  <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+  <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div th:replace="~{fragments/header :: header}"></div>
+
+  <form
+    id="uploadForm"
+    method="post"
+    th:action="@{/files/result}"
+    enctype="multipart/form-data">
+	<h3>Upload Folder1</h3>
+	<div class="row">
+	    <input type="file" name="files1" webkitdirectory multiple required>
+	</div>
+	
+	<h3>Upload Folder2</h3>
+	<div class="row">
+	    <input type="file" name="files2" webkitdirectory multiple required>
+	</div>
+	<div class="row">
+    <button class="btn btn-lg btn-outline-success float-right" type="submit">
+      Upload
+    </button>
+	</div>
+  </form>
+
+
+  <div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+
+</html>

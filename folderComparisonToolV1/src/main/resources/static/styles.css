@@ -1,0 +1,98 @@
+form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+  }
+
+  h1 {
+      color: #308d46;
+  }
+
+  .uploadButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+  }
+
+  .row {
+      margin: 10px 0;
+  }
+  
+  .footer-nav p {
+  	text-align: center;
+  }
+
+  .svg-inline--fa {
+    vertical-align: -0.200em;
+  }
+
+  .rounded-social-buttons {
+    text-align: center;
+  }
+
+  .rounded-social-buttons .social-button {
+	display: inline-block;
+	  position: relative;
+	  cursor: pointer;
+	  width: 3.125rem;
+	  height: 3.125rem;
+	  border: 0.125rem solid transparent;
+	  padding: 0;
+	  text-decoration: none;
+	  text-align: center;
+	  color: #fefefe;
+	  font-size: 1.5625rem;
+	  font-weight: normal;
+	  line-height: 2em;
+	  border-radius: 1.6875rem;
+	  transition: all 0.5s ease;
+	  margin-right: 0.25rem;
+	  margin-bottom: 0.25rem;
+  }
+
+  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+  .rounded-social-buttons .fa-envelope, .fa-github, .fa-linkedin {
+    font-size: 25px;
+  }
+
+  .rounded-social-buttons .social-button.github {
+    background: #3b5998;
+  }
+
+  .rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+    color: rgb(0, 0, 0);
+    background: #fefefe;
+    border-color: #3b5998;
+  }
+
+  .rounded-social-buttons .social-button.envelope {
+    background: #55acee;
+  }
+
+  .rounded-social-buttons .social-button.envelope:hover, .rounded-social-buttons .social-button.envelope:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+  }
+
+  .rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+  }
+
+  .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+  }
