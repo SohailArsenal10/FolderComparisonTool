@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import com.javafolderapp.folderComparisonToolV1.service.FileService;
 //import com.javafolderapp.folderComparisonToolV1.model.FileModel;
 //import com.javafolderapp.folderComparisonToolV1.service.FileServiceImplementation;
@@ -58,8 +60,9 @@ public class FileController {
 	// @PostMapping annotation maps HTTP POST 
 	// requests onto specific handler methods
 	@PostMapping("/files/result") 
-	public String uploadMultipartFile(@RequestParam("files1") MultipartFile[] files1, @RequestParam("files2") MultipartFile[] files2, Model model) {  //Model model
-	try {
+	public String uploadMultipartFile(@RequestParam("files1") MultipartFile[] files1, @RequestParam("files2") MultipartFile[] files2, Model model) {
+	
+		try {
 		// Declare empty list for collect the files data 
 		// which will come from UI
 		//List<FileModel> fileList = new ArrayList<FileModel>();

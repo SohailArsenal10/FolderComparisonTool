@@ -14,3 +14,16 @@ signUpBtn.addEventListener("click", () => {
 
 firstForm.addEventListener("submit", (e) => e.preventDefault());
 secondForm.addEventListener("submit", (e) => e.preventDefault());
+
+
+$.fn.backButton = function() {
+  if (document.referrer !== "") {
+    $(this).show();
+    $(this).on('click', function(e) {
+      e.preventDefault();
+      window.location.href = document.referrer;
+    });
+  }
+}
+
+$('.back-button').backButton();
