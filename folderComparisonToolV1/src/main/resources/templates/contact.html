@@ -23,7 +23,7 @@
 <div class="container right-panel-active">
 	<!-- Review -->
 	<div class="container__form container--signup">
-		<form action="#" class="form" id="form1">
+		<form th:action="@{/review}" class="form" id="form1" method="post">
 			<h2 class="form__title">Leave a Review</h2>
 			<input type="text" placeholder="User" class="input" />
 			<input type="email" placeholder="Email" class="input" />
@@ -31,18 +31,15 @@
 			<div class="form-group message">
 				<textarea id="formMessage" class="input" rows="3" placeholder="Message"></textarea>
 			</div>
-			<button class="btn">Submit</button>
+			<button class="btn" type="submit">Submit</button>
 		</form>
 	</div>
 
 	<!-- Rate Us -->
 	<div class="container__form container--signin">
-		<!--<button class="pulse">Back To Home</button>-->
-		<a class="back-button" href="#">
-		  &lt;&nbsp;BACK
-		</a>
+		
+		<a class="btnback" href="./UploadFiles" role="button" style="position: absolute;left:2%;top:2%;">< Back to Home</a>
 		<form action="#" class="form" id="form2">
-			<!--<button class="pulse">Back To Home</button>-->
 			<h2 class="form__title">Rate Us</h2>			
 			<div th:replace="~{fragments/footer :: footer}"></div>						
 		</form>

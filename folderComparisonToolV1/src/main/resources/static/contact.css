@@ -390,28 +390,11 @@ input.starinput:checked ~ label {
 	    background: #fefefe;
 	    border-color: #007bb5;
 	  }
-
-	  .pulse{
-		position: absolute;
-		top:0;
-		left:0;
-		
-	  }
 	  
-
-	  .back-button {
-		position: absolute;
-		top:10%;
-		left:10%;
-	    background: rgb(0,128,128);
-	    color: white;
-	    font-size: 30px;
-	    line-height: 1;
-	    padding: 20px 30px 15px 25px;
-	    text-decoration: none;
-	    transition: all 0.2s;
-	  }
-
-	  .back-button:hover {
-	    background: rgba(0,128,128,0.8);
-	  }
+	  .btnback
+	  	  {
+	  		position: absolute;
+	  		top:5%;
+	  		left:5%;
+	  	  }
+	  
