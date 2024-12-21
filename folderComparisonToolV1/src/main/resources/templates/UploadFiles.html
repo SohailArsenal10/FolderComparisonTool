@@ -21,6 +21,7 @@
     method="post"
     th:action="@{/files/result}"
     enctype="multipart/form-data">
+	<h4 th:if="${message}">[[${message}]]</h4>
 	<h3>Upload Multiple Files for Folder1</h3>
 	<div class="row">
 	    <input type="file" name="files1" multiple required>

@@ -12,6 +12,10 @@ form {
       color: #308d46;
   }
 
+  table { border-collapse: collapse; margin: auto; width: 50%;}
+  tr { display: block; float: left; }
+  th, td { display: block; border: 1px solid black; }
+  
   .uploadButton {
       padding: 10px 20px;
       font-size: 16px;
@@ -96,3 +100,4 @@ form {
     background: #fefefe;
     border-color: #007bb5;
   }
+  

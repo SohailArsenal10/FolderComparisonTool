@@ -11,6 +11,7 @@
   <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
   <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
       <link rel="stylesheet" type="text/css" th:href="@{/contact.css}" />
+	  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 	  <!--<script type="text/javascript" th:src="@{/contact.js}"></script>
   <link href="contact.css" rel="stylesheet" />
 	<script src="contact.js"></script>
@@ -36,50 +37,14 @@
 
 	<!-- Rate Us -->
 	<div class="container__form container--signin">
+		<!--<button class="pulse">Back To Home</button>-->
+		<a class="back-button" href="#">
+		  &lt;&nbsp;BACK
+		</a>
 		<form action="#" class="form" id="form2">
-			<h2 class="form__title">Rate Us</h2>
-			<!--<input type="email" placeholder="Email" class="input" />
-			<input type="password" placeholder="Password" class="input" />
-			<a href="#" class="link">Forgot your password?</a>
-			<button class="btn">Submit</button>-->
-			<div class="star-widget">
-			                    <form method="GET" name="feedback" action="#" onsubmit="feedBack(); return false">
-			                    <input type="radio" name="star" class = "starinput" id="rate-5" value="5">
-			                    <label for="rate-5" class="fa-solid fa-star"></label>
-			                    <input type="radio" name="star" class = "starinput" id="rate-4" value="4">
-			                    <label for="rate-4" class="fa-solid fa-star"></label>
-			                    <input type="radio" name="star" class = "starinput" id="rate-3" value="3">
-			                    <label for="rate-3" class="fa-solid fa-star"></label>
-			                    <input type="radio" name="star" class = "starinput" id="rate-2" value="2">
-			                    <label for="rate-2" class="fa-solid fa-star"></label>
-			                    <input type="radio" name="star" class = "starinput" id="rate-1" value="1">
-			                    <label for="rate-1" class="fa-solid fa-star"></label>
-			                    <p id="error-rating"></p>
-			                    <p class="rating-desc"></p>
-			                    <div class="textarea1">
-			                        <textarea cols="30" id="comment" placeholder="Describe your comment"></textarea>
-			                        <p id="error-comment"></p>
-			                    </div>
-			                    <div class="btn1">
-			                        <button type="submit">Submit</button>
-			                    </div>
-			                        <div class="modal fade" id="simpleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			                            <div class="modal-dialog modal-dialog-centered">
-			                            <div class="modal-content">
-			                                <div class="modal-header">
-			                                <h3 class="modal-title" id="exampleModalLabel">Thank you</h3>
-			                                <button type="button" class="btn1-close" data-bs-dismiss="modal" aria-label="Close" onClick="reload"></button>
-			                                </div>
-			                                <div class="modal-body">
-			                                    <p>We appreciate you sending us your feedback.</p>
-			                                    <p><strong>You're select </strong>⭐ <span id="star_count"></span></p>
-			                                    <p><strong>Your comment </strong><span id="comment_text"></span></p>
-			                                </div>
-			                            </div>
-			                            </div>
-			                        </div>
-			                    </form>
-			                </div>
+			<!--<button class="pulse">Back To Home</button>-->
+			<h2 class="form__title">Rate Us</h2>			
+			<div th:replace="~{fragments/footer :: footer}"></div>						
 		</form>
 	</div>
 
@@ -87,7 +52,7 @@
 	<div class="container__overlay">
 		<div class="overlay">
 			<div class="overlay__panel overlay--left">
-				<button class="btn" id="signIn">No Review? Rate Us</button>
+				<button class="btn" id="signIn">More..</button>
 			</div>
 			<div class="overlay__panel overlay--right">
 				<button class="btn" id="signUp">Leave a Review</button>
