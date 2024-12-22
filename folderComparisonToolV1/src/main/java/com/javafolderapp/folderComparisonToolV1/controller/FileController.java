@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.javafolderapp.folderComparisonToolV1.service.FileService;
-import com.javafolderapp.folderComparisonToolV1.service.GoogleSheetsLive;
+//import com.javafolderapp.folderComparisonToolV1.service.GoogleSheetsLive;
 //import com.javafolderapp.folderComparisonToolV1.model.FileModel;
 //import com.javafolderapp.folderComparisonToolV1.service.FileServiceImplementation;
 
@@ -23,8 +23,8 @@ public class FileController {
 
 	//@Autowired
 	//FileServiceImplementation fileServiceImplementation;
-	@Autowired
-	GoogleSheetsLive gsl;
+	/*@Autowired
+	GoogleSheetsLive gsl;*/
 
 	// @GetMapping annotation for 
 	// mapping HTTP GET requests onto
@@ -143,7 +143,7 @@ public class FileController {
 		return "FileList";
 	}
 	
-	@PostMapping("/review") 
+	/*@PostMapping("/review") 
 	public String contactreview()
 	{
 		try {
@@ -160,5 +160,5 @@ public class FileController {
 			
 		}
 		return "contact";
-	}
+	}*/
 }
