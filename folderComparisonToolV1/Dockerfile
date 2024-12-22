@@ -1,8 +1,4 @@
-FROM maven:3.8.5-openjdk-17 AS build
-COPY . .
-RUN mvn clean package -DskipTests
-
-FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/folderComparisonToolV1-0.0.1-SNAPSHOT folderComparisonTool.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","folderComparisonTool.jar"]
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+COPY target/folderComparisonToolV1-0.0.1-SNAPSHOT.jar folder-comparison-tool.jar
+ENTRYPOINT ["java","-jar","/folder-comparison-tool.jar"]
