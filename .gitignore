@@ -2,4 +2,11 @@ rough/
 .metadata/
 *.classpath
 *.project
-folderComparisonTool/.settings/
+folderComparisonTool/
+mvnw
+*.cmd
+.settings/
+.mvn/
+target/
+google-sheets-client-secret.json
+
