@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<!--<html>-->
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <title>Contact Page</title>
 
   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
   <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-      <link rel="stylesheet" type="text/css" th:href="@{/contact.css}" />
-	  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-	  <!--<script type="text/javascript" th:src="@{/contact.js}"></script>
-  <link href="contact.css" rel="stylesheet" />
-	<script src="contact.js"></script>
-<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>-->
-  
+  <link rel="stylesheet" type="text/css" th:href="@{/contact.css}" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 </head>
 
-<body>	  
-<div class="container right-panel-active">
-	<!-- Review -->
-	<div class="container__form container--signup">
-		<form action="#" class="form" id="form1">
-		<!--<form th:action="@{/review}" class="form" id="form1" method="post">-->
-			<h2 class="form__title">Leave a Review</h2>
-			<input type="text" placeholder="User" class="input" />
-			<input type="email" placeholder="Email" class="input" />
-			<!--<input type="password" placeholder="Password" class="input" />-->
-			<div class="form-group message">
-				<textarea id="formMessage" class="input" rows="3" placeholder="Message"></textarea>
-			</div>
-			<button class="btn" type="submit">Submit</button>
-		</form>
-	</div>
+<body>
+  <div class="container right-panel-active">
+    <!-- Review Form -->
+    <div class="container__form container--signup">
+      <form action="#" class="form" id="form1">
+        <h2 class="form__title">Leave a Review</h2>
+        <input type="text" placeholder="User" class="input" aria-label="User Name"/>
+        <input type="email" placeholder="Email" class="input" aria-label="Email"/>
+        <div class="form-group message">
+          <textarea id="formMessage" class="input" rows="3" placeholder="Message" aria-label="Message"></textarea>
+        </div>
+		<button class="btn" type="submit" onclick="alert(`Feedback form in progress. Meanwhile Please drop a mail at sohailahmed488@gmail.com`)">Submit</button>
+      </form>	  
+    </div>
 
-	<!-- Rate Us -->
-	<div class="container__form container--signin">
-		
-		<a class="btnback" href="./UploadFiles" role="button" style="position: absolute;left:2%;top:2%;">< Back to Home</a>
-		<form action="#" class="form" id="form2">
-			<h2 class="form__title">Rate Us</h2>			
-			<div th:replace="~{fragments/footer :: footer}"></div>						
-		</form>
-	</div>
+    <!-- Rate Us Section -->
+    <div class="container__form container--signin">
+      <a class="btnback" href="./UploadFiles" role="button" style="position: absolute; left:2%; top:2%;">&lt; Back to Home</a>
+      <form action="#" class="form" id="form2">
+        <h2 class="form__title">Socials</h2>
+        <div th:replace="~{fragments/footer :: footer}"></div>                     
+      </form>
+    </div>
 
-	<!-- Overlay -->
-	<div class="container__overlay">
-		<div class="overlay">
-			<div class="overlay__panel overlay--left">
-				<button class="btn" id="signIn">More..</button>
-			</div>
-			<div class="overlay__panel overlay--right">
-				<button class="btn" id="signUp">Leave a Review</button>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript" th:src="@{/contact.js}"></script>
+    <!-- Overlay -->
+    <div class="container__overlay">
+      <div class="overlay">
+        <div class="overlay__panel overlay--left">
+          <button class="btn" id="signIn">More..</button>
+        </div>
+        <div class="overlay__panel overlay--right">
+          <button class="btn" id="signUp">Leave a Review</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" th:src="@{/contact.js}"></script>
 </body>
 </html>
