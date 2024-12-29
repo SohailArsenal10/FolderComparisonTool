@@ -59,6 +59,10 @@ public class FileController {
 	public String contactpage1() {
 		return "contact1";
 	}
+	@GetMapping("/about") 
+	public String aboutpage() {
+		return "about";
+	}
 
 	// @PostMapping annotation maps HTTP POST 
 	// requests onto specific handler methods

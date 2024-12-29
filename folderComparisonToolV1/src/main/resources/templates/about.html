@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Folder Name Comparison Tool</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}"/>
+	<!-- Custom CSS -->
+	    <link rel="stylesheet" th:href="@{/about.css}"/>
+</head>
+<body>
+    <!-- Include the header fragment -->
+    <div th:replace="~{fragments/header :: header}"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-4">Folder Name Comparison Tool</h1>
+                    <p class="lead">A powerful and efficient tool for comparing file names between two folders, helping you identify differences quickly and accurately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Key Features -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Dual Folder Input</h3>
+                        <p>Compare two folders simultaneously, making it easy to analyze differences between file collections.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Smart Comparison</h3>
+                        <p>Advanced comparison algorithm that identifies missing and extra files between the two folders.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Detailed Results</h3>
+                        <p>Clear presentation of results showing which files are missing or extra in each folder.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Select Your Folders</h3>
+                <p>Choose two folders that you want to compare. These can be from any location on your system that you have access to.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Initiate Comparison</h3>
+                <p>Click the compare button to start the analysis. The tool will scan both folders and create a comprehensive list of all files.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>View Results</h3>
+                <p>Review the comparison results, which will show you:
+                   (1)Files that exist in the first folder but are missing from the second folder.
+                   (2)Files that exist in the second folder but are missing from the first folder.</p>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Common Use Cases</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h3>Backup Verification</h3>
+                        <p>Ensure all your files have been properly backed up by comparing the original folder with the backup location.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h3>Project Synchronization</h3>
+                        <p>Verify that two project directories contain the same files, making it easier to spot missing or extra files.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>
