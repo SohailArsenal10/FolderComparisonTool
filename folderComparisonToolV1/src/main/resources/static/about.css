@@ -1,0 +1,132 @@
+:root {
+            --primary-color: #0367a6;
+            --secondary-color: #008997;
+            --accent-color: #36bb91;
+            --text-color: #333333;
+            --light-bg: #f8f9fa;
+            --border-radius: 10px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+		.hero-section {
+			background: linear-gradient(135deg,
+			        #20BF55 0%,    /* Bright teal */
+			        #01BAEF 100%   /* Sky blue */
+			    );
+		    color: white;
+		    padding: 4rem 0;
+		    margin-bottom: 3rem;
+		    position: relative;
+		    overflow: hidden;
+		}
+
+		/* Add a subtle overlay pattern for depth */
+		.hero-section::before {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background: radial-gradient(circle at center, 
+		        rgba(255, 255, 255, 0.1) 0%,
+		        rgba(255, 255, 255, 0) 70%
+		    );
+		    pointer-events: none;
+		}
+
+		/* Enhancement for text elements within hero section */
+		.hero-section .display-4 {
+		    font-weight: 600;
+		    margin-bottom: 1.5rem;
+		    position: relative;
+		    z-index: 1;
+		}
+
+		.hero-section .lead {
+		    font-size: 1.25rem;
+		    line-height: 1.6;
+		    opacity: 0.9;
+		    max-width: 800px;
+		    margin: 0 auto;
+		    position: relative;
+		    z-index: 1;
+		}
+
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .process-step {
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            background-color: var(--accent-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            top: -20px;
+            left: 2rem;
+        }
+
+        .demo-image {
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+			.hero-section {
+			        padding: 3rem 0;
+			    }
+			    
+			    .hero-section .display-4 {
+			        font-size: 2.5rem;
+			    }
+			    
+			    .hero-section .lead {
+			        font-size: 1.1rem;
+			        padding: 0 1rem;
+			    }
+
+            .feature-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .process-step {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
