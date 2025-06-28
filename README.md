@@ -15,7 +15,7 @@
 Compare two folders simultaneously, making it easy to analyze differences between file collections.
 
 2. Smart Comparison
-Advanced comparison algorithm that identifies missing and extra files between the two folders.4
+Advanced comparison algorithm that identifies missing and extra files between the two folders.
 
 3. Detailed Results
 Clear presentation of results showing which files are missing or extra in each folder.
